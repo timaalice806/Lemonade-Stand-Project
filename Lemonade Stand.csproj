@@ -50,12 +50,9 @@
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
     <Compile Include="Weather.cs" />
-=======
     <Compile Include="Recipe.cs" />
     <Compile Include="Wallet.cs" />
->>>>>>> 5bce223c80328e827079e9fce1f43c050dfd4fdf
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
