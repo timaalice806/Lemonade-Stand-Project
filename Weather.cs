@@ -26,6 +26,7 @@ namespace Lemonade_Stand
             List<string> weatherConditions = new List<string> () { "sunny", "cloudy", "rainy" };
             Random random = new Random();
             condition = random.Next(3);
+            
 
                 Console.WriteLine($"current condition: {weatherConditions[condition]}"); 
      
