@@ -8,7 +8,7 @@ namespace Lemonade_Stand
 {
     public class Player
     {
-        string name;
+        public string name;
         Inventory inventory;
         Wallet wallet;
         Recipe recipe;
