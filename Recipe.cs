@@ -11,6 +11,6 @@ namespace Lemonade_Stand
         public int amountOfLemons;
         public int AmountOfSugarCubes;
         public int amountOfIceCubes;
-        public double pricePerCup; 
+        public double pricePerCup;
     }
 }
