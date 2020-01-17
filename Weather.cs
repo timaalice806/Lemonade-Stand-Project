@@ -11,7 +11,7 @@ namespace Lemonade_Stand
         //VARIABLES (WEATHER HAS A..)
         public int condition;
         public int temperature;
-        public string predictedForecast;
+        public int predictedForecast;
        
 
         //CONSTRUCTOR (DEFAULT)
@@ -20,7 +20,7 @@ namespace Lemonade_Stand
         {
             
         }
-
+        //MEMBER METHODS (WEATHER CAN DO..)
         public void WeatherSelector()
         {
             List<string> weatherConditions = new List<string> () {"sunny", "cloudy", "rainy"};
@@ -28,16 +28,16 @@ namespace Lemonade_Stand
             condition = random.Next(3);
 
             Console.WriteLine($"current condition: {weatherConditions[condition]}"); 
-            Console.ReadLine();
+            
         }
-
         public void TempSelector()
         {
             Random random = new Random();
             temperature = random.Next(5, 11) *10 + 5;
+            Random random2 = new Random();
+            predictedForecast = random.Next(-15, 15);
             {
-                Console.WriteLine($"current temperature: {temperature}");
-                Console.ReadLine();
+                Console.WriteLine($"current temperature: {temperature} and the predicted forcast for tomorrow is {temperature + predictedForecast}");
             }
         }
     }

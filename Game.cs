@@ -10,7 +10,8 @@ namespace Lemonade_Stand
     {
         Player player;
         Weather weather = new Weather();
-
+        Customer customer = new Customer();
+        
         //VARIABLES (GAME HAS A..)
 
         public int currentDay;
@@ -19,15 +20,60 @@ namespace Lemonade_Stand
 
         public void GameInit()
         {
-            Console.WriteLine("Lemonade Stand Game 2020 \n Press ENTER To Play");
+            Console.WriteLine("Lemonade Stand Game 2020\nPress ENTER To Play");
             Console.ReadLine();
             Console.Clear();
         
-            Console.WriteLine("Instructions are as follows: \n 1. Game must be a minimum of 7 days \n");
+            Console.WriteLine("Instructions are as follows:\n1. Game must be a minimum of 7 days \n");
             Console.ReadLine();
 
-            weather.WeatherSelector();
-            weather.TempSelector();
+            List<string> days = new List<string>() { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+            foreach (string day in days)
+            {
+                if (day == "Sunday")
+                {
+                    weather.WeatherSelector();
+                    weather.TempSelector();
+                    customer.initCustomers();
+                }
+                else if (day == "Monday")
+                {
+                    weather.WeatherSelector();
+                    weather.TempSelector();
+                    customer.initCustomers();
+                }
+                else if (day == "Tuesday")
+                {
+                    weather.WeatherSelector();
+                    weather.TempSelector();
+                    customer.initCustomers();
+                }
+                else if (day == "Wednesday")
+                {
+                    weather.WeatherSelector();
+                    weather.TempSelector();
+                    customer.initCustomers();
+                }
+                else if (day == "Thursday")
+                {
+                    weather.WeatherSelector();
+                    weather.TempSelector();
+                    customer.initCustomers();
+                }
+                else if (day == "Friday")
+                {
+                    weather.WeatherSelector();
+                    weather.TempSelector();
+                    customer.initCustomers();
+                }
+                else if (day == "Saturday")
+                {
+                    weather.WeatherSelector();
+                    weather.TempSelector();
+                    customer.initCustomers();
+                }
+            }
+           
         }
 
         public void PlayGame()
