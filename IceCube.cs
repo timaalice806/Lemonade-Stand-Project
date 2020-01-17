@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Lemonade_Stand
-{ 
-    public class Inventory
+{
+    class IceCube : Item
     {
-        List<Lemon> lemons = new List<Lemon>();
+
     }
 }

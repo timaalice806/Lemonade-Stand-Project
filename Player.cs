@@ -10,9 +10,16 @@ namespace Lemonade_Stand
     {
         public string name;
         Inventory inventory;
-        Wallet wallet;
+        public Wallet wallet; 
         Recipe recipe;
         Pitcher pitcher;
+
+        public Player()
+        {
+            wallet = new Wallet();
+        }
+           
+        
 
 
     }

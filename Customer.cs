@@ -9,15 +9,17 @@ namespace Lemonade_Stand
     public class Customer
     {
         public int name;
-        public void initCustomers()
+        public void initCustomers(Random random)
         {
             List<string> names = new List<string>() { "Annalee", "Kendra", "Coy", "Cecily", "Russell", "Tom", "Chris", "Donny", "Gerry", "Berniece", "Zeph", "Serrena", "Essie", "Gordie", "Kent", "Lovell", "Cy", "Merrick", "Reuben", "Judd" };
 
-            Random random = new Random();
-            name = random.Next(21);
+            int count = random.Next(1, 20);
+            
 
-            for (int i = 0; i < name; i++)
+            for (int i = 0; i < count; i++)
             {
+
+                name = random.Next(20);
                 Console.WriteLine($"customer: {names[name]}");    
             }
             Console.ReadLine();
