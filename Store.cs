@@ -34,15 +34,16 @@ namespace Lemonade_Stand
                 Console.WriteLine($"You now have {player.wallet.cash} in your wallet");
 
             }
-            else
+            else {
                 Console.WriteLine("You don't have enough money to make that purchase, please try a different amount.");
-            sellLemons(player);
+                sellLemons(player);
+            }         
         }
 
         public void sellSugarCubes(Player player)
         {
             Console.WriteLine("");
-            Console.WriteLine($"How many suagr cubes would you like to buy, you currently have ${player.wallet.cash}.00 to spend: ");
+            Console.WriteLine($"How many sugar cubes would you like to buy, you currently have ${player.wallet.cash}.00 to spend: ");
             int userInput = int.Parse(Console.ReadLine());
             int totalSugarCost = priceSugarCubes * userInput;
             if (player.wallet.cash >= totalSugarCost)
@@ -52,9 +53,10 @@ namespace Lemonade_Stand
                 Console.WriteLine($"You now have {player.wallet.cash} in your wallet");
 
             }
-            else
+            else {
                 Console.WriteLine("You don't have enough money for that, please try a different amount");
-            sellSugarCubes(player);
+                sellSugarCubes(player);
+            }       
         }
         public void sellBagOfIceCubes(Player player)
         {
@@ -72,6 +74,7 @@ namespace Lemonade_Stand
             else
             {
                 Console.WriteLine(" You don't have enough money for that, please try a different amount.");
+                sellBagOfIceCubes(player);
             }
         }
         public void sellCups(Player player)
@@ -86,11 +89,11 @@ namespace Lemonade_Stand
                 player.wallet.cash -= pricePerCup;
 
                 Console.WriteLine("You now have " + player.wallet.cash + ".00");
-
             }
             else
             {
                 Console.WriteLine("You don't have enough money for that, please try a different amount.");
+                sellCups(player);
             }
         }
     }

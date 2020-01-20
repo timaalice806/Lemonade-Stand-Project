@@ -8,12 +8,32 @@ namespace Lemonade_Stand
 {
     class Day
     {
-        Weather weather;
-        public int customers;
-        public int probabilityOfBuying;
-        Customer customer = new Customer("");
+
+      
         
 
+        Weather weather = new Weather();
+        public int customers;
+        public int probabilityOfBuying;
+        Customer customer = new Customer("", 3);
+        
+        public void initRandomCustomer()
+        {
+            Random random = new Random();
+            customers = random.Next(20);
+            for(int j = 0; j < customers; j++)
+            {
+                for (int i = 0; i < customer.names.Count; i++)
+                {
+                    int nameIndex = random.Next(1, 20);
+
+                    probabilityOfBuying = random.Next(8);
+
+                    Console.WriteLine($"{customer.names[nameIndex]} {" "} {probabilityOfBuying}");
+                }
+                Console.ReadLine();
+            }  
+        }
         public void initRandomCustomer()
         {
             Random random = new Random();
@@ -35,6 +55,7 @@ namespace Lemonade_Stand
 
         public void CustomerProbabiltyFunc(Weather weather)
         {
+            //CustomerProbabiltyFunc(weather);
             if (weather.temperature >= 60 && weather.temperature <= 70)
             {
                 if (customer.probabilityOfBuying == 1 && customer.probabilityOfBuying == 2)
@@ -49,7 +70,10 @@ namespace Lemonade_Stand
             }
             else if (weather.temperature >= 71 && weather.temperature <= 80)
             {
-                if (customer.probabilityOfBuying == 1 && customer.probabilityOfBuying == 2 && customer.probabilityOfBuying == 3 && customer.probabilityOfBuying == 4)
+
+                
+
+                if ((probabilityOfBuying == 1) || (probabilityOfBuying == 2) || (probabilityOfBuying == 3) || (probabilityOfBuying == 4))
                 {
                     Console.WriteLine("there is a 50% chance of purchasing");
                     Console.ReadLine();
@@ -61,7 +85,7 @@ namespace Lemonade_Stand
             }
             else if (weather.temperature >= 81 && weather.temperature <= 90)
             {
-                if (probabilityOfBuying == 1 && probabilityOfBuying == 2 && probabilityOfBuying == 3 && probabilityOfBuying == 4 && probabilityOfBuying == 5 && probabilityOfBuying == 6)
+                if ((probabilityOfBuying == 1) || (probabilityOfBuying == 2) || (probabilityOfBuying == 3) || (probabilityOfBuying == 4) || (probabilityOfBuying == 5) || (probabilityOfBuying == 6))
                 {
                     Console.WriteLine("there is a 75% chance of purchasing");
                     Console.ReadLine();

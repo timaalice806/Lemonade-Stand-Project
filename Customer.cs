@@ -20,11 +20,11 @@ namespace Lemonade_Stand
         public void initCustomers(Random random)
         {
             Random random1 = new Random();
-            int name = random1.Next(21);
+           
 
-            int count = random1.Next(1, 20);
+            int count = random1.Next(1, 10);
             Weather weather = new Weather();
         }
-        
+
     }
 }
