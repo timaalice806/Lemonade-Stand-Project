@@ -12,9 +12,10 @@ namespace Lemonade_Stand
         public int probabilityOfBuying;
         public List<string> names = new List<string>() { "Annalee", "Kendra", "Coy", "Cecily", "Russell", "Tom", "Chris", "Donny", "Gerry", "Berniece", "Zeph", "Serrena", "Essie", "Gordie", "Kent", "Lovell", "Cy", "Merrick", "Reuben", "Judd" };
 
+
         public Customer()
         {
-          
+
         }
         public void initCustomers()
         {

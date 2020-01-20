@@ -8,16 +8,75 @@ namespace Lemonade_Stand
 {
     class Day
     {
+
         Weather weather = new Weather();
-        List<Customer> customers = new List<Customer>();
 
         public void initRandomCustomerList()
         {
+            List<Customer> customers = new List<Customer>();
             Random random = new Random();
             int numofcustomers = random.Next(20);
-            for (int i = 0; i < numofcustomers; i++)
+            for (int i = 0; i < numofcustomers; i++);
+        }
+                
+        public int customers;
+        public int probabilityOfBuying;
+        Customer customer = new Customer();
+        
+        public void initRandomCustomer()
+        {
+            Random random = new Random();
+
+            customers.Add(new Customer());
+
+
+            for (int i = 0; i < customer.names.Count; i++)
             {
-                customers.Add(new Customer());
+                
+                int nameIndex = random.Next(20);
+
+               
+                probabilityOfBuying = random.Next(1, 9);
+
+                Console.WriteLine($"customer: {customer.names[nameIndex]} {probabilityOfBuying}");
+                Console.ReadLine();
+            }
+        }
+
+
+        public void CustomerProbabiltyFunc(Weather weather)
+        {
+            //CustomerProbabiltyFunc(weather);
+            if (weather.temperature >= 60 && weather.temperature <= 70)
+            {
+                if (customer.probabilityOfBuying == 1 && customer.probabilityOfBuying == 2)
+                {
+                    Console.WriteLine("there is a 25% chance of purchasing");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("...");
+                }
+            }
+            else if (weather.temperature >= 71 && weather.temperature <= 80)
+            {
+
+                
+
+                if ((probabilityOfBuying == 1) || (probabilityOfBuying == 2) || (probabilityOfBuying == 3) || (probabilityOfBuying == 4))
+                {
+                    Console.WriteLine("there is a 50% chance of purchasing");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("...1");
+                }
+            }
+            else if (weather.temperature >= 81 && weather.temperature <= 90)
+            {
+                
             }
             //foreach (Customer customer in customers)
             //{
