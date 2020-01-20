@@ -8,6 +8,6 @@ namespace Lemonade_Stand
 {
     public class Wallet
     {
-        public double money;
+        public int cash = 20;
     }
 }

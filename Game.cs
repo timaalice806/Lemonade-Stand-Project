@@ -11,7 +11,8 @@ namespace Lemonade_Stand
         Player player;
         Weather weather = new Weather();
         Customer customer = new Customer();
-        
+        Random random = new Random();
+        Store store = new Store();
         //VARIABLES (GAME HAS A..)
 
         public int currentDay;
@@ -34,43 +35,65 @@ namespace Lemonade_Stand
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
-                    customer.initCustomers();
+                    customer.initCustomers(random);
+                    store.sellLemons();
+                    Console.WriteLine("Do you need more lemons today, please enter yes or no");
+                    string playerInput = Console.ReadLine();
+                    if(playerInput == "yes" || playerInput == "y")
+                    {
+                        store.sellLemons();
+                    }else if(playerInput == "no" || playerInput == "n"){
+                        Console.WriteLine("Press ENTER to continue");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Please enter either yes or no, y or n.");
+                        Console.ReadLine();
+                    }
+                    
                 }
                 else if (day == "Monday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
-                    customer.initCustomers();
+                    customer.initCustomers(random);
+                    
                 }
                 else if (day == "Tuesday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
-                    customer.initCustomers();
+                    customer.initCustomers(random);
+                    store.sellLemons();
                 }
                 else if (day == "Wednesday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
-                    customer.initCustomers();
+                    customer.initCustomers(random);
+                    store.sellLemons();
                 }
                 else if (day == "Thursday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
-                    customer.initCustomers();
+                    customer.initCustomers(random);
+                    store.sellLemons();
                 }
                 else if (day == "Friday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
-                    customer.initCustomers();
+                    customer.initCustomers(random);
+                    store.sellLemons();
                 }
                 else if (day == "Saturday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
-                    customer.initCustomers();
+                    customer.initCustomers(random);
+                    store.sellLemons();
+
                 }
             }
            
