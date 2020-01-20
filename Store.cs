@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand
 {
-    class Store
+    public class Store
     {
         public int priceLemon = 1;
         public int priceSugarCubes = 1;
@@ -28,7 +28,11 @@ namespace Lemonade_Stand
             }
             else
             {
+<<<<<<< HEAD
                 Console.WriteLine("You don't have enough money for that, please try a different amount.");
+=======
+                Console.WriteLine("You are broke, please leave immediately or security will be notified.");
+>>>>>>> d6cd1ee9c146110b23520de4ba2041f55077fe5c
             }
         }
         public void sellSugarCubes(Player player) 

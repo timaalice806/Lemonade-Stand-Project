@@ -28,7 +28,6 @@ namespace Lemonade_Stand
             condition = random.Next(3);
 
             Console.WriteLine($"current condition: {weatherConditions[condition]}"); 
-            
         }
         public void TempSelector()
         {
@@ -40,5 +39,6 @@ namespace Lemonade_Stand
                 Console.WriteLine($"current temperature: {temperature} and the predicted forcast for tomorrow is {temperature + predictedForecast}");
             }
         }
+
     }
 }
