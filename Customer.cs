@@ -16,24 +16,36 @@ namespace Lemonade_Stand
         {
             List<string> names = new List<string>() { "Annalee", "Kendra", "Coy", "Cecily", "Russell", "Tom", "Chris", "Donny", "Gerry", "Berniece", "Zeph", "Serrena", "Essie", "Gordie", "Kent", "Lovell", "Cy", "Merrick", "Reuben", "Judd" };
 
-<<<<<<< HEAD
             Random random = new Random();
             int name = random.Next(21);
-=======
             int count = random.Next(1, 20);
-            
->>>>>>> 748dbe0c762b7e3e10b79aa61226537b15e90b31
 
             for (int i = 0; i < count; i++)
             {
-
-<<<<<<< HEAD
-=======
                 name = random.Next(20);
->>>>>>> 748dbe0c762b7e3e10b79aa61226537b15e90b31
-                Console.WriteLine($"customer: {names[name]}");    
+                Console.WriteLine($"customer: {names[name]}");
             }
             Console.ReadLine();
+        }
+        public void CustomerProbabiltyFunc(Weather weather)
+        {
+            //if weather condition = sunny
+            //probabilty of potential customers is the highest (15-20)
+
+            // if temp is high (85-95)
+            //probabilty of a potential customer buying lemoande is high (60%>)
+
+            //if weather condition = cloudy
+            //probabilty of potential customers is average (10-15)
+
+            // if temp is medium (70-85)
+            //probabilty of a potential customer buying lemoande is medium (40%-60%)
+
+            //if weather condition = rainy
+            //probabilty of potential customers is the lowest (<10)
+
+            // if temp is low (<70)
+            //probabilty of a potential customer buying lemoande is low (<40%)
         }
     }
 }

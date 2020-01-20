@@ -28,7 +28,6 @@ namespace Lemonade_Stand
             condition = random.Next(3);
 
             Console.WriteLine($"current condition: {weatherConditions[condition]}"); 
-            
         }
         public void TempSelector()
         {

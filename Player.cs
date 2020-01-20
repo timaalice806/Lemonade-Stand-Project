@@ -16,7 +16,7 @@ namespace Lemonade_Stand
         public Pitcher pitcher;
 =======
         Inventory inventory;
-        public Wallet wallet; 
+        public Wallet wallet;
         Recipe recipe;
         Pitcher pitcher;
 >>>>>>> 748dbe0c762b7e3e10b79aa61226537b15e90b31
