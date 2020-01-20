@@ -18,9 +18,6 @@ namespace Lemonade_Stand
        
         
         
-        
-
-
         public Player()
         {
             wallet = new Wallet();

@@ -16,13 +16,13 @@ namespace Lemonade_Stand
         {
             List<string> names = new List<string>() { "Annalee", "Kendra", "Coy", "Cecily", "Russell", "Tom", "Chris", "Donny", "Gerry", "Berniece", "Zeph", "Serrena", "Essie", "Gordie", "Kent", "Lovell", "Cy", "Merrick", "Reuben", "Judd" };
 
-            Random random = new Random();
-            int name = random.Next(21);
+            Random random1 = new Random();
+            int name = random1.Next(21);
             int count = random.Next(1, 20);
 
             for (int i = 0; i < count; i++)
             {
-                name = random.Next(20);
+                name = random1.Next(20);
                 Console.WriteLine($"customer: {names[name]}");
             }
             Console.ReadLine();

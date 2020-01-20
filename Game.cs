@@ -46,7 +46,7 @@ namespace Lemonade_Stand
                     string playerInput = Console.ReadLine();
                     if(playerInput == "yes" || playerInput == "y")
                     {
-                        store.sellLemons(player);
+                        
                     }else if(playerInput == "no" || playerInput == "n"){
                         Console.WriteLine("Press ENTER to continue");
                     }
@@ -63,41 +63,42 @@ namespace Lemonade_Stand
                     weather.TempSelector();
                     customer.initCustomers(random);
                     
+                    
                 }
                 else if (day == "Tuesday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
                     customer.initCustomers(random);
-                    store.sellLemons();
+                    
                 }
                 else if (day == "Wednesday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
                     customer.initCustomers(random);
-                    store.sellLemons();
+                    
                 }
                 else if (day == "Thursday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
                     customer.initCustomers(random);
-                    store.sellLemons();
+                    
                 }
                 else if (day == "Friday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
                     customer.initCustomers(random);
-                    store.sellLemons();
+                    
                 }
                 else if (day == "Saturday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
                     customer.initCustomers(random);
-                    store.sellLemons();
+                    
 
                 }
             }
