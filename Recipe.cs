@@ -8,5 +8,6 @@ namespace Lemonade_Stand
 {
     public class Recipe
     {
+        
     }
 }

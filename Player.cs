@@ -15,19 +15,10 @@ namespace Lemonade_Stand
         public Recipe recipe;
         public Pitcher pitcher;
 
-       
-        
-        
-        
-
-
         public Player()
         {
             wallet = new Wallet();
         }
-           
-        
-
 
         public void GetRecipe()
         {
