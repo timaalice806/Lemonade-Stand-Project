@@ -10,12 +10,12 @@ namespace Lemonade_Stand
     {
         public string name;
         public int probabilityOfBuying;
-        List<string> names = new List<string>() { "Annalee", "Kendra", "Coy", "Cecily", "Russell", "Tom", "Chris", "Donny", "Gerry", "Berniece", "Zeph", "Serrena", "Essie", "Gordie", "Kent", "Lovell", "Cy", "Merrick", "Reuben", "Judd" };
+        public List<string> names = new List<string>() { "Annalee", "Kendra", "Coy", "Cecily", "Russell", "Tom", "Chris", "Donny", "Gerry", "Berniece", "Zeph", "Serrena", "Essie", "Gordie", "Kent", "Lovell", "Cy", "Merrick", "Reuben", "Judd" };
 
-        public Customer(string name, int probabilityOfBuying)
+        public Customer(string name)
         {
             this.name = name;
-            this.probabilityOfBuying = probabilityOfBuying;
+           
         }
         public void initCustomers(Random random)
         {
@@ -24,16 +24,6 @@ namespace Lemonade_Stand
 
             int count = random1.Next(1, 20);
             Weather weather = new Weather();
-            
-            for (int i = 0; i < count; i++)
-            {
-                name = random1.Next(20);
-                probabilityOfBuying = random1.Next(1, 9);
-
-                Console.WriteLine($"customer: {names[name]}");
-                CustomerProbabiltyFunc(weather);
-            }
-            Console.ReadLine();
         }
         
     }
