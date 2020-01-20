@@ -8,10 +8,6 @@ namespace Lemonade_Stand
 {
     public class Game
     {
-
-
-       
-
         Player player = new Player();
 
         Weather weather = new Weather();
@@ -45,7 +41,7 @@ namespace Lemonade_Stand
                     string playerInput = Console.ReadLine();
                     if(playerInput == "yes" || playerInput == "y")
                     {
-                        store.sellLemons(player);
+                        
                     }else if(playerInput == "no" || playerInput == "n"){
                         Console.WriteLine("Press ENTER to continue");
                     }
@@ -61,7 +57,6 @@ namespace Lemonade_Stand
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
-                    customer.initCustomers(random);
                     store.sellAllItems(player);
                     customer.initCustomers(random);
 
@@ -72,6 +67,7 @@ namespace Lemonade_Stand
                     weather.TempSelector();
                     store.sellAllItems(player);
                     customer.initCustomers(random);
+
                 }
                 else if (day == "Wednesday")
                 {
@@ -79,6 +75,7 @@ namespace Lemonade_Stand
                     weather.TempSelector();                   
                     store.sellAllItems(player);
                     customer.initCustomers(random);
+
                 }
                 else if (day == "Thursday")
                 {
@@ -86,6 +83,7 @@ namespace Lemonade_Stand
                     weather.TempSelector();                   
                     store.sellAllItems(player);
                     customer.initCustomers(random);
+
                 }
                 else if (day == "Friday")
                 {
@@ -93,6 +91,7 @@ namespace Lemonade_Stand
                     weather.TempSelector();
                     store.sellAllItems(player);
                     customer.initCustomers(random);
+
                 }
                 else if (day == "Saturday")
                 {
@@ -100,6 +99,7 @@ namespace Lemonade_Stand
                     weather.TempSelector();
                     store.sellAllItems(player);
                     customer.initCustomers(random);
+
                 }
             }
            
