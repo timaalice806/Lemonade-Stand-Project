@@ -9,9 +9,9 @@ namespace Lemonade_Stand
     public class Game
     {
         Player player = new Player();
-
+        Day day1 = new Day();
         Weather weather = new Weather();
-        Customer customer = new Customer();
+        Customer customer = new Customer("", 6);
         Random random = new Random();
         Store store = new Store();
         //VARIABLES (GAME HAS A..)
@@ -27,7 +27,6 @@ namespace Lemonade_Stand
             Console.Clear();
         
             Console.WriteLine("Instructions are as follows:\n1. Game must be a minimum of 7 days \n");
-            Console.ReadLine();
 
             List<string> days = new List<string>() { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
             foreach (string day in days)
@@ -37,20 +36,23 @@ namespace Lemonade_Stand
                     weather.WeatherSelector();
                     weather.TempSelector();                   
                     store.sellAllItems(player);
-                    Console.WriteLine("Do you need more lemons today, please enter yes or no");
+                    day1.initRandomCustomer();
+                    day1.CustomerProbabiltyFunc(weather);
+                    Console.WriteLine($"Welcome to {day}. Do you need more lemons today, please enter yes or no");
                     string playerInput = Console.ReadLine();
                     if(playerInput == "yes" || playerInput == "y")
                     {
-                        
+                        store.sellLemons(player);
                     }else if(playerInput == "no" || playerInput == "n"){
                         Console.WriteLine("Press ENTER to continue");
+                        customer.initCustomers(random);
                     }
                     else
                     {
                         Console.WriteLine("Please enter either yes or no, y or n.");
                         Console.ReadLine();
                     }
-                    customer.initCustomers(random);
+                    
 
                 }
                 else if (day == "Monday")
