@@ -9,8 +9,6 @@ namespace Lemonade_Stand
     public class Game
     {
 
-
-
         Player player = new Player();
 
         Weather weather = new Weather();
@@ -41,6 +39,7 @@ namespace Lemonade_Stand
                     weather.TempSelector();
                     customer.initCustomers(random);
                     store.sellLemons(player);
+                    store.sellSugarCubes(player);
                     Console.WriteLine("Do you need more lemons today, please enter yes or no");
                     string playerInput = Console.ReadLine();
                     if(playerInput == "yes" || playerInput == "y")
@@ -68,35 +67,35 @@ namespace Lemonade_Stand
                     weather.WeatherSelector();
                     weather.TempSelector();
                     customer.initCustomers(random);
-                    store.sellLemons();
+                    store.sellLemons(player);
                 }
                 else if (day == "Wednesday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
                     customer.initCustomers(random);
-                    store.sellLemons();
+                    store.sellLemons(player);
                 }
                 else if (day == "Thursday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
                     customer.initCustomers(random);
-                    store.sellLemons();
+                    store.sellLemons(player);
                 }
                 else if (day == "Friday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
                     customer.initCustomers(random);
-                    store.sellLemons();
+                    store.sellLemons(player);
                 }
                 else if (day == "Saturday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
                     customer.initCustomers(random);
-                    store.sellLemons();
+                    store.sellLemons(player);
 
                 }
             }

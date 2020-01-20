@@ -9,10 +9,12 @@ namespace Lemonade_Stand
     public class Player
     {
         public string name;
+
         public Inventory inventory;
         public Wallet wallet;
         public Recipe recipe;
         public Pitcher pitcher;
+
 
 
         public Player()
