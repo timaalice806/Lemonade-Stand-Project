@@ -18,12 +18,17 @@ namespace Lemonade_Stand
 
             Random random1 = new Random();
             int name = random1.Next(21);
+
             int count = random1.Next(1, 20);
+
+
 
             for (int i = 0; i < count; i++)
             {
                 name = random1.Next(20);
+
                 Console.Write($"{names[name]}{", "}");
+
             }
             Console.ReadLine();
         }
