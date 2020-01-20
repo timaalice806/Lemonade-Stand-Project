@@ -8,13 +8,13 @@ namespace Lemonade_Stand
 {
     class Day
     {
-        Weather weather;
-        int customers;
+        //Weather weather;
+        //int customers;
         
         public void initDay()
         {
-            Random random = new Random();
-            customers = random.Next();
+            //Random random = new Random();
+            //customers = random.Next();
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Lemonade_Stand
         public int priceCupPrices = 1;
         Player player = new Player();
 
-        public void sellLemons()
+        public void sellLemons(Player player)
         {
             Console.WriteLine($"How many lemons would you like to buy, you currently have ${player.wallet.cash}.00 to spend: ");
             int userInput = int.Parse(Console.ReadLine());
@@ -28,7 +28,7 @@ namespace Lemonade_Stand
             }
             else
             {
-                Console.WriteLine("You are a broke ass bitch, please leave immediately or security will be notified.");
+                Console.WriteLine("You are broke, please leave immediately or security will be notified.");
             }
         }
     }

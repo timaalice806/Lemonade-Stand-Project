@@ -10,7 +10,7 @@ namespace Lemonade_Stand
     {
         public string name;
         Inventory inventory;
-        public Wallet wallet; 
+        public Wallet wallet;
         Recipe recipe;
         Pitcher pitcher;
 
