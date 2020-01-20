@@ -8,9 +8,9 @@ namespace Lemonade_Stand
 { 
     public class Inventory
     {
-        List<String> lemons = new List<string>() {};
-        List<String> iceCubes = new List<string>() {};
-        List<String> cups = new List<string>() {};
-        List<String> sugarCubes = new List<string>() {};
+        public List<String> lemons = new List<string>() {};
+        public List<String> iceCubes = new List<string>() {};
+        public List<String> cups = new List<string>() {};
+        public List<String> sugarCubes = new List<string>() {};
     }
 }
