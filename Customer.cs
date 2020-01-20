@@ -8,15 +8,19 @@ namespace Lemonade_Stand
 {
     public class Customer
     {
+        public string name;
+        public int probabilityOfBuying;
+        public List<string> names = new List<string>() { "Annalee", "Kendra", "Coy", "Cecily", "Russell", "Tom", "Chris", "Donny", "Gerry", "Berniece", "Zeph", "Serrena", "Essie", "Gordie", "Kent", "Lovell", "Cy", "Merrick", "Reuben", "Judd" };
 
-       
-
-        public int name;
+        public Customer(string name, int probabilityOfBuying)
+        {
+            this.name = name;
+            this.probabilityOfBuying = probabilityOfBuying;
+        }
         public void initCustomers(Random random)
         {
-            List<string> names = new List<string>() { "Annalee", "Kendra", "Coy", "Cecily", "Russell", "Tom", "Chris", "Donny", "Gerry", "Berniece", "Zeph", "Serrena", "Essie", "Gordie", "Kent", "Lovell", "Cy", "Merrick", "Reuben", "Judd" };
-
             Random random1 = new Random();
+
             int name = random1.Next(21);
 
             int count = random1.Next(1, 20);
@@ -31,26 +35,8 @@ namespace Lemonade_Stand
 
             }
             Console.ReadLine();
+
         }
-        public void CustomerProbabiltyFunc(Weather weather)
-        {
-            //if weather condition = sunny
-            //probabilty of potential customers is the highest (15-20)
 
-            // if temp is high (85-95)
-            //probabilty of a potential customer buying lemoande is high (60%>)
-
-            //if weather condition = cloudy
-            //probabilty of potential customers is average (10-15)
-
-            // if temp is medium (70-85)
-            //probabilty of a potential customer buying lemoande is medium (40%-60%)
-
-            //if weather condition = rainy
-            //probabilty of potential customers is the lowest (<10)
-
-            // if temp is low (<70)
-            //probabilty of a potential customer buying lemoande is low (<40%)
-        }
     }
 }

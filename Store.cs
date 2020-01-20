@@ -10,58 +10,57 @@ namespace Lemonade_Stand
     {
         public int priceLemon = 1;
         public int priceSugarCubes = 1;
-        public int priceBagOfIceCubes = 10;
+        public int priceBagOfIceCubes = 4;
         public int pricePerCup = 1;
-        Player player = new Player();
 
-       
-
+        public void sellAllItems(Player player)
+        {
+            sellLemons(player);
+            sellSugarCubes(player);
+            sellCups(player);
+            sellBagOfIceCubes(player);
+        }
 
         public void sellLemons(Player player)
         {
+            Console.WriteLine("");
             Console.WriteLine($"How many lemons would you like to buy, you currently have ${player.wallet.cash}.00 to spend: ");
             int userInput = int.Parse(Console.ReadLine());
-            priceLemon = priceLemon * userInput; 
-            if(player.wallet.cash >= priceLemon)
+            int totalLemonCost = priceLemon * userInput;
+            if (player.wallet.cash >= totalLemonCost)
             {
-                Console.WriteLine($"You are buying {userInput} lemon, for a total price of {priceLemon} ");
-                player.wallet.cash -= priceLemon;
+                Console.WriteLine($"You are buying {userInput} lemon, for a total price of {totalLemonCost} ");
+                player.wallet.cash -= totalLemonCost;
                 Console.WriteLine($"You now have {player.wallet.cash} in your wallet");
                 
             }
-            else
-            {
-<<<<<<< HEAD
-
-                Console.WriteLine("You don't have enough money for that, please try a different amount.");
-
-                Console.WriteLine("You are broke, please leave immediately or security will be notified.");
-
-=======
-                Console.WriteLine("You don't have enough money for that, please try a different amount.");
-
->>>>>>> 75cc033104cba35abc47ed3dddc9d0c44a909734
-            }
+            else {
+                Console.WriteLine("You don't have enough money to make that purchase, please try a different amount.");
+                sellLemons(player);
+            }         
         }
-        public void sellSugarCubes(Player player) 
+
+        public void sellSugarCubes(Player player)
         {
-            Console.WriteLine("How many sugar cubes would you like to buy? You currently have" + player.wallet.cash + ".00 to spend:");
+            Console.WriteLine("");
+            Console.WriteLine($"How many sugar cubes would you like to buy, you currently have ${player.wallet.cash}.00 to spend: ");
             int userInput = int.Parse(Console.ReadLine());
-            priceSugarCubes = priceSugarCubes * userInput;
-            if (player.wallet.cash >= priceSugarCubes)
+            int totalSugarCost = priceSugarCubes * userInput;
+            if (player.wallet.cash >= totalSugarCost)
             {
-                Console.WriteLine(" You are buying" + userInput + " sugar cubes, for a total price of " + priceSugarCubes + ".");
-                player.wallet.cash -= priceSugarCubes;
-                Console.WriteLine("You now have " + player.wallet.cash + " in your wallet.");
-               
+                Console.WriteLine($"You are buying {userInput} sugar cubes, for a total price of {totalSugarCost} ");
+                player.wallet.cash -= totalSugarCost;
+                Console.WriteLine($"You now have {player.wallet.cash} in your wallet");
+
             }
-            else 
-            {
+            else {
                 Console.WriteLine("You don't have enough money for that, please try a different amount");
-            }
+                sellSugarCubes(player);
+            }       
         }
-        public void sellBagOfIceCubes(Player player) 
+        public void sellBagOfIceCubes(Player player)
         {
+            Console.WriteLine("");
             Console.WriteLine("How many bags of ice cubes would you like to buy? You currently have " + player.wallet.cash + ".00 to spend:");
             int userInput = int.Parse(Console.ReadLine());
             priceBagOfIceCubes = priceBagOfIceCubes * userInput;
@@ -70,15 +69,17 @@ namespace Lemonade_Stand
                 Console.WriteLine("You are buying " + userInput + " bags of ice cubes, for a total price of " + priceBagOfIceCubes + ".");
                 player.wallet.cash -= priceBagOfIceCubes;
                 Console.WriteLine(" You now have " + player.wallet.cash + " in you wallet.");
-                
+
             }
-            else 
+            else
             {
                 Console.WriteLine(" You don't have enough money for that, please try a different amount.");
+                sellBagOfIceCubes(player);
             }
         }
-        public void sellCups(Player player) 
+        public void sellCups(Player player)
         {
+            Console.WriteLine("");
             Console.WriteLine("How many cups would you like to buy? You currently have " + player.wallet.cash + ".00");
             int userInput = int.Parse(Console.ReadLine());
             pricePerCup = pricePerCup * userInput;
@@ -86,14 +87,14 @@ namespace Lemonade_Stand
             {
                 Console.WriteLine("You are buying " + userInput + " cups, for a total price of " + pricePerCup + ".");
                 player.wallet.cash -= pricePerCup;
-                Console.WriteLine("You now have" + player.wallet.cash + ".00");
-                
+
+                Console.WriteLine("You now have " + player.wallet.cash + ".00");
             }
-            else 
+            else
             {
                 Console.WriteLine("You don't have enough money for that, please try a different amount.");
+                sellCups(player);
             }
         }
-
     }
 }

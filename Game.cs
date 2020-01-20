@@ -10,9 +10,9 @@ namespace Lemonade_Stand
     {
 
         Player player = new Player();
-
+        Day day1 = new Day();
         Weather weather = new Weather();
-        Customer customer = new Customer();
+        Customer customer = new Customer("", 6);
         Random random = new Random();
         Store store = new Store();
         //VARIABLES (GAME HAS A..)
@@ -28,7 +28,6 @@ namespace Lemonade_Stand
             Console.Clear();
         
             Console.WriteLine("Instructions are as follows:\n1. Game must be a minimum of 7 days \n");
-            Console.ReadLine();
 
             List<string> days = new List<string>() { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
             foreach (string day in days)
@@ -36,17 +35,19 @@ namespace Lemonade_Stand
                 if (day == "Sunday")
                 {
                     weather.WeatherSelector();
-                    weather.TempSelector();
-                    customer.initCustomers(random);
-                    store.sellLemons(player);
-                    store.sellSugarCubes(player);
-                    Console.WriteLine("Do you need more lemons today, please enter yes or no");
+                    weather.TempSelector();                   
+                    store.sellAllItems(player);
+                    day1.initRandomCustomer();
+                    day1.CustomerProbabiltyFunc(weather);
+                    Console.WriteLine($"Welcome to {day}. Do you need more lemons today, please enter yes or no");
+
                     string playerInput = Console.ReadLine();
                     if(playerInput == "yes" || playerInput == "y")
                     {
-                        
+                        store.sellLemons(player);
                     }else if(playerInput == "no" || playerInput == "n"){
                         Console.WriteLine("Press ENTER to continue");
+                        customer.initCustomers(random);
                     }
                     else
                     {
@@ -54,69 +55,54 @@ namespace Lemonade_Stand
                         Console.ReadLine();
                     }
                     
+
                 }
                 else if (day == "Monday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
+                    store.sellAllItems(player);
                     customer.initCustomers(random);
-                    
-                    
+
                 }
                 else if (day == "Tuesday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
+                    store.sellAllItems(player);
                     customer.initCustomers(random);
-<<<<<<< HEAD
-                    store.sellLemons(player);
-=======
-                    
->>>>>>> 75cc033104cba35abc47ed3dddc9d0c44a909734
+
                 }
                 else if (day == "Wednesday")
                 {
                     weather.WeatherSelector();
-                    weather.TempSelector();
+                    weather.TempSelector();                   
+                    store.sellAllItems(player);
                     customer.initCustomers(random);
-<<<<<<< HEAD
-                    store.sellLemons(player);
-=======
-                    
->>>>>>> 75cc033104cba35abc47ed3dddc9d0c44a909734
+
                 }
                 else if (day == "Thursday")
                 {
                     weather.WeatherSelector();
-                    weather.TempSelector();
+                    weather.TempSelector();                   
+                    store.sellAllItems(player);
                     customer.initCustomers(random);
-<<<<<<< HEAD
-                    store.sellLemons(player);
-=======
-                    
->>>>>>> 75cc033104cba35abc47ed3dddc9d0c44a909734
+
                 }
                 else if (day == "Friday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
+                    store.sellAllItems(player);
                     customer.initCustomers(random);
-<<<<<<< HEAD
-                    store.sellLemons(player);
-=======
-                    
->>>>>>> 75cc033104cba35abc47ed3dddc9d0c44a909734
+
                 }
                 else if (day == "Saturday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
+                    store.sellAllItems(player);
                     customer.initCustomers(random);
-<<<<<<< HEAD
-                    store.sellLemons(player);
-=======
-                    
->>>>>>> 75cc033104cba35abc47ed3dddc9d0c44a909734
 
                 }
             }

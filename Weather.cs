@@ -32,7 +32,7 @@ namespace Lemonade_Stand
         public void TempSelector()
         {
             Random random = new Random();
-            temperature = random.Next(5, 11) *10 + 5;
+            temperature = random.Next(5, 10) *10 + 5;
             Random random2 = new Random();
             predictedForecast = random.Next(-15, 15);
             {

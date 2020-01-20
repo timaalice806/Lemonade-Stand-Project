@@ -15,21 +15,11 @@ namespace Lemonade_Stand
         public Recipe recipe;
         public Pitcher pitcher;
 
-<<<<<<< HEAD
 
-
-=======
-       
-        
-        
->>>>>>> 75cc033104cba35abc47ed3dddc9d0c44a909734
         public Player()
         {
             wallet = new Wallet();
         }
-           
-        
-
 
         public void GetRecipe()
         {
