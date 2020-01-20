@@ -6,8 +6,25 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand
 {
-    class Customer
+    public class Customer
     {
-        public string name;
+
+       
+
+        public int name;
+        public void initCustomers()
+        {
+            List<string> names = new List<string>() { "Annalee", "Kendra", "Coy", "Cecily", "Russell", "Tom", "Chris", "Donny", "Gerry", "Berniece", "Zeph", "Serrena", "Essie", "Gordie", "Kent", "Lovell", "Cy", "Merrick", "Reuben", "Judd" };
+
+            Random random = new Random();
+            int name = random.Next(21);
+
+            for (int i = 0; i < name; i++)
+            {
+
+                Console.WriteLine($"customer: {names[name]}");    
+            }
+            Console.ReadLine();
+        }
     }
 }
