@@ -20,6 +20,8 @@ namespace Lemonade_Stand
         {
             inventory = new Inventory();
             wallet = new Wallet();
+            pitcher = new Pitcher();
+            recipe = new Recipe(4,2,1,1);
         }
 
         public void GetRecipe()

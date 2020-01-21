@@ -8,23 +8,22 @@ namespace Lemonade_Stand
 {
     public class Game
     {
-<<<<<<< HEAD
+
 
         Player player = new Player();
-=======
-        public Player player = new Player();
->>>>>>> 6413f185db47c0dae7f5c227aae3e2053311d1d3
-        Day day1 = new Day();
-        //Weather weather = new Weather();
-        //Customer customer = new Customer();
-        //Random random = new Random();
-        //Store store = new Store();
 
-        //VARIABLES (GAME HAS A..)
+
+       
+
+        
+        Day day1;
+        public Game()
+        {
+            day1 = new Day(player);
+        }
+
 
         public int currentDay;
-
-        //MEMBER MEMTHOD (CAN DO)
 
         public void GameInit()
         {

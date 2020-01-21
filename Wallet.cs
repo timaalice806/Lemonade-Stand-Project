@@ -8,8 +8,6 @@ namespace Lemonade_Stand
 {
     public class Wallet
     {
-        //create a getter and setter for this section.
-        public int cash = 20;
-
+        public int cash = 50;
     }
 }
