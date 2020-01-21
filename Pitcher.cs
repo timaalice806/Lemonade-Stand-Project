@@ -8,5 +8,10 @@ namespace Lemonade_Stand
 {
     public class Pitcher
     {
+        public int cups =10;
+        public void MakePitcher(Recipe recipe, Inventory inventory)
+        {
+            
+        }
     }
 }
