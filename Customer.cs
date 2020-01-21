@@ -23,7 +23,6 @@ namespace Lemonade_Stand
             name = names[rng.Next(0, names.Count)];
             customerProbilityOfBuying = false;
             CustomerProbabiltyFunc();
-
         }
 
         public bool CustomerProbabiltyFunc()
@@ -31,13 +30,11 @@ namespace Lemonade_Stand
             if (tempPref >= 75 && tempPref <= 95)
             {
                 return customerProbilityOfBuying = true;
-
-            }else
+            }
+            else
             {
                 return customerProbilityOfBuying = false;
             }
-
-            
         }
     }
 }

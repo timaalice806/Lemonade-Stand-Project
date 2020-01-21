@@ -51,6 +51,8 @@ namespace Lemonade_Stand
             Console.WriteLine("");
             Console.WriteLine($"How many sugar cubes would you like to buy, you currently have ${player.wallet.cash}.00 to spend");
             int userInput = int.Parse(Console.ReadLine());
+            
+            
             int totalSugarCost = priceSugarCubes * userInput;
             if (player.wallet.cash >= totalSugarCost)
             {
@@ -102,7 +104,7 @@ namespace Lemonade_Stand
             if (player.wallet.cash >= totalCups)
             {
                 Console.WriteLine($"You are buying {userInput} cups, for a total price of {totalCups}");
-                player.wallet.cash -= pricePerCup;
+                player.wallet.cash -= totalCups;
                 Console.WriteLine($"You now have {player.wallet.cash} in your wallet");
                 for (int i = 0; i < userInput; i++)
                 {

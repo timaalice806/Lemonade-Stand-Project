@@ -8,8 +8,12 @@ namespace Lemonade_Stand
 {
     public class Game
     {
-        public Player player = new Player();
-        Day day1 = new Day();
+        Player player = new Player();
+        Day day1;
+        public Game()
+        {
+            day1 = new Day(player);
+        }
         //Weather weather = new Weather();
         //Customer customer = new Customer();
         //Random random = new Random();
