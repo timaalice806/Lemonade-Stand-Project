@@ -12,7 +12,7 @@ namespace Lemonade_Stand
         Player player = new Player();
         Day day1 = new Day();
         Weather weather = new Weather();
-        Customer customer = new Customer("", 6);
+        Customer customer = new Customer();
         Random random = new Random();
         Store store = new Store();
         //VARIABLES (GAME HAS A..)
@@ -29,16 +29,17 @@ namespace Lemonade_Stand
         
             Console.WriteLine("Instructions are as follows:\n1. Game must be a minimum of 7 days \n");
 
-            List<string> days = new List<string>() { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
-            foreach (string day in days)
+            List<string> dayOfTheWeek = new List<string>() { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+            foreach (string weekDay in dayOfTheWeek)
             {
-                if (day == "Sunday")
+                if (weekDay == "Sunday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();                   
                     store.sellAllItems(player);
-                    day1.initRandomCustomer();
-                    day1.CustomerProbabiltyFunc(weather);
+                    //day1.initRandomCustomer();
+
+                    customer.CustomerProbabiltyFunc(weather);
                     Console.WriteLine($"Welcome to {day}. Do you need more lemons today, please enter yes or no");
 
                     string playerInput = Console.ReadLine();
@@ -47,7 +48,7 @@ namespace Lemonade_Stand
                         store.sellLemons(player);
                     }else if(playerInput == "no" || playerInput == "n"){
                         Console.WriteLine("Press ENTER to continue");
-                        customer.initCustomers(random);
+                        //customer.initCustomers(random);
                     }
                     else
                     {
@@ -57,52 +58,52 @@ namespace Lemonade_Stand
                     
 
                 }
-                else if (day == "Monday")
+                else if (weekDay == "Monday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
                     store.sellAllItems(player);
-                    customer.initCustomers(random);
+                    //customer.initCustomers(random);
 
                 }
-                else if (day == "Tuesday")
+                else if (weekDay == "Tuesday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
                     store.sellAllItems(player);
-                    customer.initCustomers(random);
+                    //customer.initCustomers(random);
 
                 }
-                else if (day == "Wednesday")
+                else if (weekDay == "Wednesday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();                   
                     store.sellAllItems(player);
-                    customer.initCustomers(random);
+                    //customer.initCustomers(random);
 
                 }
-                else if (day == "Thursday")
+                else if (weekDay == "Thursday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();                   
                     store.sellAllItems(player);
-                    customer.initCustomers(random);
+                    //customer.initCustomers(random);
 
                 }
-                else if (day == "Friday")
+                else if (weekDay == "Friday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
                     store.sellAllItems(player);
-                    customer.initCustomers(random);
+                    //customer.initCustomers(random);
 
                 }
-                else if (day == "Saturday")
+                else if (weekDay == "Saturday")
                 {
                     weather.WeatherSelector();
                     weather.TempSelector();
                     store.sellAllItems(player);
-                    customer.initCustomers(random);
+                    //customer.initCustomers(random);
 
                 }
             }

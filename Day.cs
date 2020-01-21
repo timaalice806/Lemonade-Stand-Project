@@ -8,41 +8,48 @@ namespace Lemonade_Stand
 {
     class Day
     {
+
         Weather weather = new Weather();
+
+        public void initRandomCustomerList()
+        {
+            List<Customer> customers = new List<Customer>();
+            Random random = new Random();
+            int numofcustomers = random.Next(20);
+            for (int i = 0; i < numofcustomers; i++);
+        }
+                
         public int customers;
         public int probabilityOfBuying;
-        Customer customer = new Customer("", 3);
+        Customer customer = new Customer();
         
         public void initRandomCustomer()
         {
             Random random = new Random();
-            customers = random.Next(20);
-            for(int j = 0; j < customers; j++)
+
+            customers.Add(new Customer());
+
+
+            for (int i = 0; i < customer.names.Count; i++)
             {
-                for (int i = 0; i < customer.names.Count; i++)
-                {
-                    int nameIndex = random.Next(1, 20);
+                
+                int nameIndex = random.Next(20);
 
-                    probabilityOfBuying = random.Next(8);
+               
+                probabilityOfBuying = random.Next(1, 9);
 
-                    Console.WriteLine($"{customer.names[nameIndex]} {" "} {probabilityOfBuying}");
-                }
+                Console.WriteLine($"customer: {customer.names[nameIndex]} {probabilityOfBuying}");
                 Console.ReadLine();
-            }  
+            }
         }
 
-        public void initDay()
-        {
-            //Random random = new Random();
-            //customers = random.Next();
-        }
 
         public void CustomerProbabiltyFunc(Weather weather)
         {
             //CustomerProbabiltyFunc(weather);
             if (weather.temperature >= 60 && weather.temperature <= 70)
             {
-                if (probabilityOfBuying == 1 && probabilityOfBuying == 2)
+                if (customer.probabilityOfBuying == 1 && customer.probabilityOfBuying == 2)
                 {
                     Console.WriteLine("there is a 25% chance of purchasing");
                     Console.ReadLine();
@@ -54,6 +61,9 @@ namespace Lemonade_Stand
             }
             else if (weather.temperature >= 71 && weather.temperature <= 80)
             {
+
+                
+
                 if ((probabilityOfBuying == 1) || (probabilityOfBuying == 2) || (probabilityOfBuying == 3) || (probabilityOfBuying == 4))
                 {
                     Console.WriteLine("there is a 50% chance of purchasing");
@@ -66,18 +76,13 @@ namespace Lemonade_Stand
             }
             else if (weather.temperature >= 81 && weather.temperature <= 90)
             {
-                if ((probabilityOfBuying == 1) || (probabilityOfBuying == 2) || (probabilityOfBuying == 3) || (probabilityOfBuying == 4) || (probabilityOfBuying == 5) || (probabilityOfBuying == 6))
-                {
-                    Console.WriteLine("there is a 75% chance of purchasing");
-                    Console.ReadLine();
-                }
-                else
-                {
-                    Console.WriteLine("...2");
-                }
+                
             }
-
-
+            //foreach (Customer customer in customers)
+            //{
+            //    customer.initCustomers
+            //}
+          
             //if weather condition = sunny
             //probabilty of potential customers is the highest (15-20)
 
@@ -95,6 +100,10 @@ namespace Lemonade_Stand
 
             // if temp is low (<70)
             //probabilty of a potential customer buying lemoande is low (<40%)
+        }
+        public void initDay()
+        {
+
         }
     }
 }

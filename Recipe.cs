@@ -27,7 +27,8 @@ namespace Lemonade_Stand
         public void MakePitcher()
         {
             int defaultPitcher = amtOfLemons + amtOfSugar + amtOfIceCubes;
-            Console.WriteLine($"This makes {defaultPitcher} pitcher of lemonade, 10 cups per {defaultPitcher} pitchers");
+            Console.WriteLine($"This makes {defaultPitcher} pitcher of lemonade, 10 cups per {defaultPitcher} pitcher");
+            Console.ReadLine();
         }
     }
 }
