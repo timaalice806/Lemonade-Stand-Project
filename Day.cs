@@ -15,7 +15,7 @@ namespace Lemonade_Stand
         Weather weather = new Weather();
         public int customers;
         public int probabilityOfBuying;
-        Customer customer = new Customer("", 3);
+        Customer customer = new Customer();
         
         public void initRandomCustomer()
         {

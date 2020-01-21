@@ -11,12 +11,8 @@ namespace Lemonade_Stand
         Player player = new Player();
         Day day1 = new Day();
         Weather weather = new Weather();
-<<<<<<< HEAD
         Customer customer = new Customer("");
-        Day day1 = new Day();
-=======
-        Customer customer = new Customer("", 6);
->>>>>>> 6767bacb6a858e981799935b36e217c8433fae78
+       
         Random random = new Random();
         Store store = new Store();
         //VARIABLES (GAME HAS A..)
