@@ -6,104 +6,123 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand
 {
-    class Day
+    public class Day
     {
-
         Weather weather = new Weather();
-
+        Customer customer = new Customer();
+        Store store = new Store();
+        List<Customer> customers = new List<Customer>();
+        Player player = new Player();
+        Pitcher pitcher = new Pitcher();
         public void initRandomCustomerList()
-        {
-            List<Customer> customers = new List<Customer>();
+        {        
             Random random = new Random();
             int numofcustomers = random.Next(20);
-            for (int i = 0; i < numofcustomers; i++);
-        }
-                
-        public int customers;
-        public int probabilityOfBuying;
-        Customer customer = new Customer();
-        
-        public void initRandomCustomer()
-        {
-            Random random = new Random();
-
-            customers.Add(new Customer());
-
-
-            for (int i = 0; i < customer.names.Count; i++)
+            for (int i = 0; i < numofcustomers; i++)
             {
-                
-                int nameIndex = random.Next(20);
-
-               
-                probabilityOfBuying = random.Next(1, 9);
-
-                Console.WriteLine($"customer: {customer.names[nameIndex]} {probabilityOfBuying}");
+                Customer customer = new Customer();
+                customers.Add(customer);
+                Console.WriteLine(customer.name.ToString());
                 Console.ReadLine();
-            }
+            }  
         }
 
-
-        public void CustomerProbabiltyFunc(Weather weather)
+        public void customersPurchase()
         {
-            //CustomerProbabiltyFunc(weather);
-            if (weather.temperature >= 60 && weather.temperature <= 70)
+            foreach (Customer customer in customers)
             {
-                if (customer.probabilityOfBuying == 1 && customer.probabilityOfBuying == 2)
+                if (customer.customerProbilityOfBuying == true)
                 {
-                    Console.WriteLine("there is a 25% chance of purchasing");
-                    Console.ReadLine();
+                    player.wallet.cash += 3;
+                    player.pitcher.cups -= 1;
+
                 }
                 else
                 {
-                    Console.WriteLine("...");
+
                 }
             }
-            else if (weather.temperature >= 71 && weather.temperature <= 80)
-            {
-
-                
-
-                if ((probabilityOfBuying == 1) || (probabilityOfBuying == 2) || (probabilityOfBuying == 3) || (probabilityOfBuying == 4))
-                {
-                    Console.WriteLine("there is a 50% chance of purchasing");
-                    Console.ReadLine();
-                }
-                else
-                {
-                    Console.WriteLine("...1");
-                }
-            }
-            else if (weather.temperature >= 81 && weather.temperature <= 90)
-            {
-                
-            }
-            //foreach (Customer customer in customers)
-            //{
-            //    customer.initCustomers
-            //}
-          
-            //if weather condition = sunny
-            //probabilty of potential customers is the highest (15-20)
-
-            // if temp is high (85-95)
-            //probabilty of a potential customer buying lemoande is high (60%>)
-
-            //if weather condition = cloudy
-            //probabilty of potential customers is average (10-15)
-
-            // if temp is medium (70-85)
-            //probabilty of a potential customer buying lemoande is medium (40%-60%)
-
-            //if weather condition = rainy
-            //probabilty of potential customers is the lowest (<10)
-
-            // if temp is low (<70)
-            //probabilty of a potential customer buying lemoande is low (<40%)
         }
-        public void initDay()
+        public void DayInit(Player player)
         {
+            List<string> dayOfTheWeek = new List<string>() { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+            foreach (string weekDay in dayOfTheWeek)
+            {
+                if (weekDay == "Sunday")
+                {
+                    Console.WriteLine($"Welcome to {weekDay}");
+                    weather.WeatherSelector();
+                    weather.TempSelector();
+                    store.sellAllItems(player);
+                    initRandomCustomerList();
+                    customer.CustomerProbabiltyFunc();
 
+                    //string playerInput = Console.ReadLine();
+                    //if (playerInput == "yes" || playerInput == "y")
+                    //{
+                    //    store.sellAllItems(player);
+                    //}
+                    //else if (playerInput == "no" || playerInput == "n")
+                    //{
+                    //    Console.WriteLine("Press ENTER to continue");
+                    //}
+                    //else
+                    //{
+                    //    Console.WriteLine("Please enter either yes or no, y or n.");
+                    //    Console.ReadLine();
+                    //}
+                }
+                else if (weekDay == "Monday")
+                {
+                    Console.WriteLine($"Welcome to {weekDay}");
+                    weather.WeatherSelector();
+                    weather.TempSelector();
+                    store.sellAllItems(player);
+                    initRandomCustomerList();
+                    customer.CustomerProbabiltyFunc();
+                }
+                else if (weekDay == "Tuesday")
+                {
+                    Console.WriteLine($"Welcome to {weekDay}");
+                    weather.WeatherSelector();
+                    weather.TempSelector();
+                    store.sellAllItems(player);
+                    customer.CustomerProbabiltyFunc();
+                }
+                else if (weekDay == "Wednesday")
+                {
+                    Console.WriteLine($"Welcome to {weekDay}");
+                    weather.WeatherSelector();
+                    weather.TempSelector();
+                    store.sellAllItems(player);
+                    customer.CustomerProbabiltyFunc();
+
+                }
+                else if (weekDay == "Thursday")
+                {
+                    Console.WriteLine($"Welcome to {weekDay}");
+                    weather.WeatherSelector();
+                    weather.TempSelector();
+                    store.sellAllItems(player);
+                    customer.CustomerProbabiltyFunc();
+                }
+                else if (weekDay == "Friday")
+                {
+                    Console.WriteLine($"Welcome to {weekDay}");
+                    weather.WeatherSelector();
+                    weather.TempSelector();
+                    store.sellAllItems(player);
+                    customer.CustomerProbabiltyFunc();
+                }
+                else if (weekDay == "Saturday")
+                {
+                    Console.WriteLine($"Welcome to {weekDay}");
+                    weather.WeatherSelector();
+                    weather.TempSelector();
+                    store.sellAllItems(player);
+                    customer.CustomerProbabiltyFunc();
+                }
+            }
         }
     }
 }
