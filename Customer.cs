@@ -9,22 +9,33 @@ namespace Lemonade_Stand
     public class Customer
     {
         public string name;
-        public int probabilityOfBuying;
+        public bool customerProbilityOfBuying;
         public List<string> names = new List<string>() { "Annalee", "Kendra", "Coy", "Cecily", "Russell", "Tom", "Chris", "Donny", "Gerry", "Berniece", "Zeph", "Serrena", "Essie", "Gordie", "Kent", "Lovell", "Cy", "Merrick", "Reuben", "Judd" };
+        public int tempPref;
+        Wallet wallet;
+        Customer customer;
+        Pitcher pitcher;
 
-        public Customer(string name)
+        public Customer()
         {
-            this.name = name;
-           
+            Random rng = new Random();
+            tempPref = rng.Next(55, 95);
+            name = names[rng.Next(0, names.Count)];
+            customerProbilityOfBuying = false;
+            CustomerProbabiltyFunc();
         }
-        public void initCustomers(Random random)
+
+        public bool CustomerProbabiltyFunc()
         {
-            Random random1 = new Random();
-           
-
-            int count = random1.Next(1, 10);
-            Weather weather = new Weather();
+            if (tempPref >= 75 && tempPref <= 95)
+            {
+                return customerProbilityOfBuying = true;
+            }
+            else
+            {
+                return customerProbilityOfBuying = false;
+            }
         }
-
     }
 }
+
