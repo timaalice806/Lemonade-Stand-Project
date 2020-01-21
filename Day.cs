@@ -9,7 +9,7 @@ namespace Lemonade_Stand
     public class Day
     {
         Weather weather = new Weather();
-        Recipe recipe = new Recipe(4,2,40,1);
+        Recipe recipe = new Recipe(4, 2, 40, 1);
         Customer customer = new Customer();
         Store store = new Store();
         List<Customer> customers = new List<Customer>();
@@ -18,6 +18,7 @@ namespace Lemonade_Stand
         Inventory inventory = new Inventory();
         public void initRandomCustomerList()
         {        
+
             Random random = new Random();
             int numofcustomers = random.Next(20);
             for (int i = 0; i < numofcustomers; i++)

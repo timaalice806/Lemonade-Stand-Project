@@ -17,13 +17,13 @@ namespace Lemonade_Stand
 
         
         Day day1;
+        public int currentDay;
+
+
         public Game()
         {
             day1 = new Day(player);
         }
-
-
-        public int currentDay;
 
         public void GameInit()
         {
