@@ -10,7 +10,7 @@ namespace Lemonade_Stand
     {
         public string name;
         public bool customerProbilityOfBuying;
-        public List<string> names = new List<string>() { "Annalee", "Kendra", "Coy", "Cecily", "Russell", "Tom", "Chris", "Donny", "Gerry", "Berniece", "Zeph", "Serrena", "Essie", "Gordie", "Kent", "Lovell", "Cy", "Merrick", "Reuben", "Judd" };
+        public List<string> names = new List<string>() {"Annalee", "Kendra", "Coy", "Cecily", "Russell", "Tom", "Chris", "Donny", "Gerry", "Berniece", "Zeph", "Serrena", "Essie", "Gordie", "Kent", "Lovell", "Cy", "Merrick", "Reuben", "Judd"};
         public int tempPref;
         Wallet wallet;
         Customer customer;

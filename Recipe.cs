@@ -27,7 +27,7 @@ namespace Lemonade_Stand
         public void MakePitcher()
         {
             int defaultPitcher = amtOfLemons + amtOfSugar + amtOfIceCubes;
-            Console.WriteLine($"The the default recipe includes {amtOfLemons} lemons, {amtOfSugar} and {amtOfIceCubes} ice cubes to make 1 pitcher of lemonade, 10 cups per {pitcher} pitcher");
+            Console.WriteLine($"The the default recipe includes {amtOfLemons} lemons, {amtOfSugar} sugar cubes and {amtOfIceCubes} ice cubes to make 1 pitcher of lemonade, 10 cups per {pitcher} pitcher");
             Console.ReadLine();
         }
     }

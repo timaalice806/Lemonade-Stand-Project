@@ -45,7 +45,6 @@ namespace Lemonade_Stand
                 sellLemons(player);
             }         
         }
-
         public void sellSugarCubes(Player player)
         {
             Console.WriteLine("");

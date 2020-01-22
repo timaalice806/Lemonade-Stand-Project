@@ -12,7 +12,6 @@ namespace Lemonade_Stand
         public int condition;
         public int temperature;
         public int predictedForecast;
-       
 
         //CONSTRUCTOR (DEFAULT)
 
@@ -39,6 +38,5 @@ namespace Lemonade_Stand
                 Console.WriteLine($"current temperature: {temperature} and the predicted forcast for tomorrow is {temperature + predictedForecast}");
             }
         }
-
     }
 }

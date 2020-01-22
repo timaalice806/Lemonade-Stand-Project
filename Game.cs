@@ -8,20 +8,15 @@ namespace Lemonade_Stand
 {
     public class Game
     {
+        //VARIABLES (GAME HAS A..)
+
         Player player = new Player();
         Day day1;
+        public int currentDay;
         public Game()
         {
             day1 = new Day(player);
         }
-        //Weather weather = new Weather();
-        //Customer customer = new Customer();
-        //Random random = new Random();
-        //Store store = new Store();
-
-        //VARIABLES (GAME HAS A..)
-
-        public int currentDay;
 
         //MEMBER MEMTHOD (CAN DO)
 
@@ -31,7 +26,7 @@ namespace Lemonade_Stand
             Console.ReadLine();
             Console.Clear();
         
-            Console.WriteLine("Instructions are as follows:\n1. Game must be a minimum of 7 days \n");
+            Console.WriteLine("Instructions are as follows:\n1. Game must be a minimum of 7 days \n"); //DO NOT FORGET TO ADD REST OF RULES//
             day1.DayInit(player);
         }
     }

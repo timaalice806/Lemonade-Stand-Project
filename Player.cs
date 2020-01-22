@@ -14,7 +14,6 @@ namespace Lemonade_Stand
         public Wallet wallet;
         public Recipe recipe;
         public Pitcher pitcher;
-
         public Player()
         {
             inventory = new Inventory();

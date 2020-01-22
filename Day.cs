@@ -46,7 +46,7 @@ namespace Lemonade_Stand
                     player.wallet.cash += player.recipe.pricePerCup;
                     player.pitcher.cups -= 1;
 
-                    Console.WriteLine($"${player.wallet.cash}.00 cash on hand, {player.pitcher.cups} pitchers remaining");
+                    Console.WriteLine($"${player.wallet.cash}.00 cash on hand, {player.pitcher.cups} cups remaining");
                     Console.WriteLine("");
                 }
                 else
