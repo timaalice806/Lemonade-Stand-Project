@@ -31,7 +31,8 @@ namespace Lemonade_Stand
             Console.ReadLine();
             Console.Clear();
         
-            Console.WriteLine("Instructions are as follows:\n1. Game must be a minimum of 7 days \n");
+            Console.WriteLine("INSTRUCTIONS ARE AS FOLLOWS:\nYour goal is to make as much money as you can in 7 days by selling lemondade at your lemonade stand.\nBuy cups, lemons, sugar and ice cubes.Your customers will purchasse based on the weather and conditions.\nAt the end of the week see how you have made, play again and try and beat your score.");
+            Console.WriteLine("");
             day1.DayInit(player);
         }
     }

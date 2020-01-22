@@ -21,12 +21,17 @@ namespace Lemonade_Stand
             sellCups(player);
             sellBagOfIceCubes(player);
         }
-
         public void sellLemons(Player player)
         {
-            Console.WriteLine("");
-            Console.WriteLine($"How many lemons would you like to buy, you currently have ${player.wallet.cash}.00 to spend");
-            int userInput = int.Parse(Console.ReadLine());
+            int userInput;
+            do
+            {
+                Console.WriteLine("");
+                Console.WriteLine($"How many lemons would you like to buy, you currently have ${player.wallet.cash}.00 to spend");
+                //int userInput = int.Parse(Console.ReadLine());
+
+            } while (!int.TryParse(Console.ReadLine(), out userInput));
+
             int totalLemonCost = priceLemon * userInput;
             if (player.wallet.cash >= totalLemonCost)
             {
@@ -52,9 +57,15 @@ namespace Lemonade_Stand
 
         public void sellSugarCubes(Player player)
         {
-            Console.WriteLine("");
-            Console.WriteLine($"How many sugar cubes would you like to buy, you currently have ${player.wallet.cash}.00 to spend");
-            int userInput = int.Parse(Console.ReadLine());
+            int userInput;
+            do
+            {
+                Console.WriteLine("");
+                Console.WriteLine($"How many sugar cubes would you like to buy, you currently have ${player.wallet.cash}.00 to spend");
+               // int userInput = int.Parse(Console.ReadLine());
+
+            } while (!int.TryParse(Console.ReadLine(), out userInput));
+            
             
             
             int totalSugarCost = priceSugarCubes * userInput;
@@ -77,9 +88,17 @@ namespace Lemonade_Stand
         }
         public void sellBagOfIceCubes(Player player)
         {
-            Console.WriteLine("");
-            Console.WriteLine($"How many bags of ice cubes would you like to buy? You currently have ${player.wallet.cash}.00 to spend");
-            int userInput = int.Parse(Console.ReadLine());
+
+            
+            int userInput;
+            do
+            {
+                Console.WriteLine("");
+                Console.WriteLine($"How many bags of ice cubes would you like to buy? You currently have ${player.wallet.cash}.00 to spend");
+                // int userInput = int.Parse(Console.ReadLine());
+
+            } while (!int.TryParse(Console.ReadLine(), out userInput));
+
             int totalIceCubesCost = priceBagOfIceCubes * userInput;
             if (player.wallet.cash >= priceBagOfIceCubes)
             {
@@ -103,7 +122,16 @@ namespace Lemonade_Stand
         {
             Console.WriteLine("");
             Console.WriteLine($"How many cups would you like to buy? You currently have ${player.wallet.cash}.00 to spend");
-            int userInput = int.Parse(Console.ReadLine());
+
+            int userInput;
+            do
+            {
+                Console.WriteLine("");
+                Console.WriteLine($"How many cups would you like to buy? You currently have ${player.wallet.cash}.00 to spend");
+                // int userInput = int.Parse(Console.ReadLine());
+
+            } while (!int.TryParse(Console.ReadLine(), out userInput));
+        
             int totalCups = pricePerCup * userInput;
             if (player.wallet.cash >= totalCups)
             {
