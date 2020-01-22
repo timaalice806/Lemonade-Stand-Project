@@ -25,6 +25,7 @@ namespace Lemonade_Stand
             CustomerProbabiltyFunc();
         }
 
+
         public bool CustomerProbabiltyFunc()
         {
             if (tempPref >= 75 && tempPref <= 95)

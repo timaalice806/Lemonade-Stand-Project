@@ -8,6 +8,7 @@ namespace Lemonade_Stand
 {
     public class Pitcher
     {
+
         public int cups = 10;
         public void NewPitcher(Recipe recipe, Inventory inventory)
         {
@@ -21,5 +22,6 @@ namespace Lemonade_Stand
                 inventory.lemons.RemoveRange(0, recipe.amtOfLemons); inventory.sugarCubes.RemoveRange(0, recipe.amtOfSugar); inventory.iceCubes.RemoveRange(0, recipe.amtOfIceCubes);
             } while ((recipe.amtOfLemons <= inventory.lemons.Count) && (recipe.amtOfSugar <= inventory.sugarCubes.Count) && (recipe.amtOfIceCubes <= inventory.iceCubes.Count));
         }
+
     }
 }
